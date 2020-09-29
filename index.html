@@ -1,102 +1,48 @@
-<! DOCTYPE html>
-    <html>
-
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>SaWa</title>
-
-        <link rel="stylesheet" href="style.css">
-        
-        <script type="text/javascript" src="appone.js"></script>
-        <script type="text/javascript" src="apptwo.js"></script>
-
-        <script>
-            "use strict";
-
-            var setRGB = function () {
-                var r = Math.round(Math.random() * 255);
-                var g = Math.round(Math.random() * 255);
-                var b = Math.round(Math.random() * 255);
-                var a = Math.random().toPrecision(1);
-                sawaBody.style.color = "rgba(" + r + "," + g + "," + b + ",1)";
-            };
-
-            const changeBackgroundColor = function () {
-                const sawaBody = document.getElementById('sawaBody');
-                setInterval(setRGB, 1000);
-            }
-            window.onload = changeBackgroundColor;
-
-        </script>
-
+        <title>CSS Grid</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="basic.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <body>
+        <!-- <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>11</div>
+            <div>21</div>
+            <div>31</div>
+            <div>41</div>
+            <div>51</div>
+            <div>61</div>
+        </div> -->
 
-    <body id="sawaBody" style="background-color: black; font-family: Book Antiqua, Palatino, serif;">
 
-        <header>
-            <h1 id="home">Welcome to SaWa</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sec1">Sec-1</a></li>
-                <li><a href="#sec2">Sec-2</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </header>
+        <!-- <div class="container">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div> -->
 
-        <main>
+        <!-- ################ -->
 
-            <article>
-
-                <section id="sec1">
-                    <h2>"de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h2>
-                    <aside>Take short notes</aside>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
-                        dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
-                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-                        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
-                        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-                        molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-                        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
-                </section>
-
-                <section id="sec2">
-                    <h2>1914 translation by H. Rackham</h2>
-                    <p>"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
-                        and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
-                        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
-                        in their duty through weakness of will, which is the same as saying through shrinking from toil
-                        and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our
-                        power of choice is untrammelled and when nothing prevents our being able to do what we like
-                        best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and
-                        owing to the claims of duty or the obligations of business it will frequently occur that
-                        pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in
-                        these matters to this principle of selection: he rejects pleasures to secure other greater
-                        pleasures, or else he endures pains to avoid worse pains."</p>
-                </section>
-
-            </article>
-
-            <div>
-                <label for="my-checkbox">
-                    <input id="my-checkbox" type="checkbox" />
-                    <span>
-                        <span class="not-checked">Not Checked</span>
-                        <span class="is-checked">Checked</span>
-                    </span>
-                </label>
+        <div class="section-container">
+            <div class="section-header">
+                <i class="fa fa-paw"></i>
+                <h3>Lorem</h3>
+                <hr>
             </div>
-
-        </main>
-
-        <footer id="contact">
-            <hr />
-            <em>help@sawa.com</em>
-            <br />
-            <em>Privacy Policy</em>
-        </footer>
-
+            <div class="left-column">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            <div class="right-column"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+            <div class="left-column">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            <div class="right-column">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        </div>
     </body>
-
-    </html>
+</html>

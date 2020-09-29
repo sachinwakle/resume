@@ -1,0 +1,71 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: [menu-start foot-start] 1fr [content-start main-start menu-end] 5fr [main-end content-end foot-end];
+    grid-template-rows: [menu-start] 50px [content-start] auto [content-end menu-end] 50px;
+    grid-gap: 3px;
+}
+
+.header {
+    grid-column: main;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-column: foot;
+}
+
+
+/* ############### */
+
+
+.section-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-gap: 1%;
+}
+
+.section-container > .section-header {
+    grid-column: 1 / -1;
+}
+
+.section-container > .section-header-separator {
+    grid-column: 1 / -1;
+}
+
+.section-container > .left-column {
+    grid-column: 1 / span 1;
+}
+
+.section-container > .right-column {
+    grid-column: 2 / -1;
+}
+
+div.section-container {
+    font-size: 1.2em;
+}
+
+/* h1 {font-size:2em}  displayed at 24px */
+/* h2 {font-size:1.5em}  displayed at 18px */
+/* h3 {font-size:1.25em}  displayed at 15px */
+/* h4 {font-size:1em}  displayed at 12px */
+
+/* p {
+    font-size: 1em;
+} */
+
+.section-header > :nth-child(-n+2) {
+    display: inline-block;
+    margin: 0;
+    margin-right: 1.5em;
+}
+
+
