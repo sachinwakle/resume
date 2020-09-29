@@ -49,9 +49,9 @@
     grid-column: 2 / -1;
 }
 
-div.section-container {
+/* div.section-container {
     font-size: 1.2em;
-}
+} */
 
 /* h1 {font-size:2em}  displayed at 24px */
 /* h2 {font-size:1.5em}  displayed at 18px */
@@ -65,7 +65,16 @@ div.section-container {
 .section-header > :nth-child(-n+2) {
     display: inline-block;
     margin: 0;
-    margin-right: 1.5em;
+    margin-right: 0.5em;
 }
 
 
+
+
+.parent-font {
+    font-size: 1.2em;
+}
+
+.child-font {
+    font-size: 2em;
+}
