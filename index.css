@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
-    grid-gap: 1%;
+    grid-gap: 0.5em;
 }
 
 .section-container > .section-header {
@@ -65,7 +65,14 @@
 .section-header > :nth-child(-n+2) {
     display: inline-block;
     margin: 0;
-    margin-right: 0.5em;
+    margin-right: 0.2em;
+}
+
+.section-header > hr {
+    display: block;
+    margin: 0.2em auto;
+    border: 2px solid lightgray;
+    border-radius: 5px;
 }
 
 
@@ -75,6 +82,18 @@
     font-size: 1.2em;
 }
 
-.child-font {
-    font-size: 2em;
+.right-column p {
+    /* margin: 0; */
+}
+
+.para-grouping > p {
+    margin: 0 auto;
+}
+
+.para-grouping .strong-font {
+    font-weight: bold;
+}
+
+.para-grouping {
+    margin-bottom: 1em;
 }
