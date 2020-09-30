@@ -1,36 +1,63 @@
-.container {
-    height: 100%;
+/* General styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font: 100% "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* ################ */
+
+/* .experience-heading i {
+    float:left;
+    margin-right:20px;
+    position: relative;
+    top:2px;
+  }  */
+
+
+body {
+    background-color: lightskyblue;
+}
+
+.supreme-container {
     display: grid;
-    grid-template-columns: [menu-start foot-start] 1fr [content-start main-start menu-end] 5fr [main-end content-end foot-end];
-    grid-template-rows: [menu-start] 50px [content-start] auto [content-end menu-end] 50px;
-    grid-gap: 3px;
+    grid-template-columns: minmax(0.5em,1fr) repeat(12,minmax(auto,1fr)) minmax(0.5em,1fr);
+    grid-template-rows: auto;
+    grid-gap: 0.5%;
 }
 
-.header {
-    grid-column: main;
+.supreme-container > * {
+    grid-column: 2 / 14 ;
+    /* border: 1px solid black; */
 }
 
-.menu {
-    grid-area: menu;
+.supreme-container > .profile-pic-container {
+    grid-column: 1 / -1;
+} 
+
+div .profile-pic-sec {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
 }
 
-.content {
-    grid-area: content;
-}
-
-.footer {
-    grid-column: foot;
-}
-
-
-/* ############### */
+/* ############### Section Container ################# */
 
 
 .section-container {
     display: grid;
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: auto;
-    grid-gap: 0.5em;
+    gap: 0.5em;
     text-align: justify;
 }
 
@@ -50,18 +77,21 @@
     grid-column: 2 / -1;
 }
 
-/* div.section-container {
-    font-size: 1.2em;
-} */
+.skill-section .left-column {
+    grid-column: 1 / span 5;
+}
 
-/* h1 {font-size:2em}  displayed at 24px */
-/* h2 {font-size:1.5em}  displayed at 18px */
-/* h3 {font-size:1.25em}  displayed at 15px */
-/* h4 {font-size:1em}  displayed at 12px */
+.skill-section  .right-column {
+    grid-column: 6 / -1;
+}
 
-/* p {
-    font-size: 1em;
-} */
+.section-container > .single-middle-column-list {
+    grid-column: 2 / -1;
+}
+
+.section-container > .single-middle-column {
+    grid-column: 1 / -1;
+}
 
 .section-header > :nth-child(-n+2) {
     display: inline-block;
@@ -77,17 +107,6 @@
     background-color: lightgray;
 }
 
-
-
-
-.parent-font {
-    font-size: 1.2em;
-}
-
-.right-column p {
-    /* margin: 0; */
-}
-
 .para-grouping > p {
     margin: 0 auto;
 }
@@ -97,5 +116,63 @@
 }
 
 .para-grouping {
-    margin-bottom: 1em;
+    margin-bottom: 0.4em;
+}
+
+/* ##################### */
+
+@media screen and (min-width: 40em) {
+    body {
+        background-color: lightgreen;
+    }
+
+    .supreme-container > .name-banner {
+        grid-column: 2 / 8;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .supreme-container > .profile-pic-container {
+        grid-column: 10 / 14;
+    }
+
+    .supreme-container > .work-experience-section {
+        grid-column: 6 / 14;
+    }
+
+    .supreme-container > .education-section {
+        grid-column: 6 / 14;
+    }
+
+    .supreme-container > .skill-section {
+        grid-column: 2 / 6;
+        grid-row: 3;
+    }
+
+    .supreme-container > .achievement-section {
+        grid-column: 6 / 14;
+    }
+
+    .supreme-container > .personal-info-section {
+        grid-column: 2 / 6;
+        grid-row: 6 / span 3;
+    }
+
+    .supreme-container > .interest-section {
+        grid-column: 6 / 14;
+    }
+
+    @media screen and (min-width: 64em) {
+        body {
+            background-color: lightpink;
+        }
+
+        .supreme-container {
+            grid-template-columns: minmax(150px,1fr) repeat(12,minmax(auto,1fr)) minmax(150px,1fr);
+        }
+    }
+
 }
