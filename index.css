@@ -10,6 +10,8 @@ html, body {
     margin: 0;
     padding: 0;
     font: 100% "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: white;
+    color: black;
 }
 
 /* ################ */
@@ -20,11 +22,6 @@ html, body {
     position: relative;
     top:2px;
   }  */
-
-
-body {
-    background-color: lightskyblue;
-}
 
 .supreme-container {
     display: grid;
@@ -102,9 +99,9 @@ div .profile-pic-sec {
 .section-header > hr {
     display: block;
     margin: 0.2em auto;
-    border: 2px solid lightgray;
+    border: 2px solid #b3b3b3;
     border-radius: 5px;
-    background-color: lightgray;
+    background-color: #b3b3b3;
 }
 
 .para-grouping > p {
@@ -117,6 +114,19 @@ div .profile-pic-sec {
 
 .para-grouping {
     margin-bottom: 0.4em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.name-banner, .section-header, .skill-proficiency-bar {
+    color: #864313;
 }
 
 /* ##################### */
