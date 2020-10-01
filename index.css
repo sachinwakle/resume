@@ -54,7 +54,7 @@ div .profile-pic-sec {
 .section-container {
     display: grid;
     grid-template-columns: repeat(8,1fr);
-    grid-template-rows: auto;
+    grid-template-rows: max-content;
     gap: 0.5em;
     text-align: justify;
 }
@@ -137,8 +137,14 @@ a:hover {
 /* ################ Media Queries ###########*/
 
 @media screen and (min-width: 40em) {
-    body {
-        background-color: lightgreen;
+    /* body {
+        background-color: white;
+    } */
+
+    .supreme-container {
+        grid-template-columns: minmax(0,0) repeat(12,minmax(auto,1fr)) minmax(0,0);
+        column-gap: 2%;
+        row-gap: 1%;
     }
 
     .supreme-container > .name-banner {
@@ -156,6 +162,7 @@ a:hover {
 
     .supreme-container > .work-experience-section {
         grid-column: 6 / 14;
+        grid-row: span 2;
     }
 
     .supreme-container > .education-section {
@@ -173,20 +180,24 @@ a:hover {
 
     .supreme-container > .personal-info-section {
         grid-column: 2 / 6;
-        grid-row: 6 / span 3;
+        grid-row: 4 / span 2;
     }
 
     .supreme-container > .interest-section {
         grid-column: 6 / 14;
     }
 
+    .skill-proficiency-bar {
+        font-size: 0.7em;
+    }
+
     @media screen and (min-width: 64em) {
-        body {
+        /* body {
             background-color: lightpink;
-        }
+        } */
 
         .supreme-container {
-            grid-template-columns: minmax(150px,1fr) repeat(12,minmax(auto,1fr)) minmax(150px,1fr);
+            grid-template-columns: minmax(11em,1fr) repeat(12,minmax(auto,1fr)) minmax(11em,1fr);
         }
     }
 
